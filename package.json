@@ -4,7 +4,7 @@
   "description": "Redis adapter for jugglingdb",
   "main": "index.js",
   "scripts": {
-    "test": "nodeunit test/redis"
+    "test": "nodeunit test/redis.js"
   },
   "dependencies": {
     "redis": "= 0.7.2"
