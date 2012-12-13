@@ -10,7 +10,8 @@
     "redis": "= 0.7.2"
   },
   "devDependencies": {
-    "jugglingdb": "= 0.2.x"
+    "jugglingdb": "= 0.2.x",
+    "nodeunit": "latest"
   },
   "repository": "",
   "author": "Anatoliy Chakkaev <mail@anatoliy.in>",
