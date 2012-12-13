@@ -1,4 +1,4 @@
-## Redis
+## JDB-Redis [![Build Status](https://travis-ci.org/1602/jugglingdb-redis.png)](https://travis-ci.org/1602/jugglingdb-redis)
 
 Adapter for jugglingdb.
 
