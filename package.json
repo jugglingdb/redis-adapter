@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Redis adapter for jugglingdb",
   "main": "index.js",
+  "contributors": [
+    { "name": "Mikko Lehtinen", "homepage": "https://github.com/mikkolehtinen" }
+  ],
   "scripts": {
     "test": "nodeunit test/redis.js"
   },
