@@ -1,6 +1,6 @@
 {
   "name": "jugglingdb-redis",
-  "version": "0.0.2",
+  "version": "0.0.2-1",
   "description": "Redis adapter for jugglingdb",
   "main": "index.js",
   "contributors": [
