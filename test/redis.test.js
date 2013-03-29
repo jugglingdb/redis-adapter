@@ -1,24 +1,27 @@
-var jdb = require('jugglingdb'),
-    Schema = jdb.Schema,
-    test = jdb.test;
+var db, Model, should = require('should');
 
-var schema = new Schema(__dirname + '/..', {});
+require('jugglingdb/test/common.batch.js');
 
-test(module.exports, schema);
+describe('redis', function() {
+    before(function() {
+        db = getSchema();
+        Model = db.define('Model', { name: String, });
 
-test.it('should not parse String as JSON', function (test) {
-    var Model = schema.define('Model', {
-        name: String,
-    });
-    var m = new Model({name: '{"property": true}'});
-    m.save(function (err, mm) {
-        test.ok(!err);
-        test.equal(mm.name, '{"property": true}');
-        Model.find(mm.id, function (err, mmm) {
-            test.ok(!err);
-            test.equal(typeof mmm.name, 'string');
-            test.equal(mmm.name, '{"property": true}');
-            test.done();
+        it('should not parse String as JSON', function (done) {
+            var m = new Model({name: '{"property": true}'});
+            m.save(function (err, mm) {
+                should.not.exist(err);
+                should.exist(mm);
+                mm.name.should.equal('{"property": true}');
+
+                Model.find(mm.id, function (err, mmm) {
+                    should.not.exist(err);
+                    should.exist(mmm);
+                    mmm.name.should.be.a.String;
+                    mmm.name.should.equal('{"property": true}');
+                    done();
+                });
+            });
         });
     });
-});
+})
