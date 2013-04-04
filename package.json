@@ -16,7 +16,7 @@
     "redis": "= 0.7.2"
   },
   "devDependencies": {
-    "jugglingdb": "= 0.2.x",
+    "jugglingdb": "https://github.com/1602/jugglingdb/archive/master.tar.gz",
     "should": "~1.2.2",
     "mocha": "~1.8.2"
   },
