@@ -1,5 +1,7 @@
 var Schema = require('jugglingdb').Schema;
 
 global.getSchema = function() {
-    return new Schema(require('../'), {});
+    var db = new Schema(require('../'), {});
+    // db.log = function (a) { console.log(a); };
+    return db;
 };
