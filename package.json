@@ -1,14 +1,18 @@
 {
   "name": "jugglingdb-redis",
-  "version": "0.0.2-1",
+  "version": "0.0.2-2",
   "description": "Redis adapter for jugglingdb",
   "main": "index.js",
   "author": "Anatoliy Chakkaev <mail@anatoliy.in>",
   "contributors": [
-    { "name": "Anatoliy Chakkaev",
-      "homepage": "https://github.com/1602" },
-    { "name": "Mikko Lehtinen",
-      "homepage": "https://github.com/mikkolehtinen" }
+    {
+      "name": "Anatoliy Chakkaev",
+      "homepage": "https://github.com/1602"
+    },
+    {
+      "name": "Mikko Lehtinen",
+      "homepage": "https://github.com/mikkolehtinen"
+    }
   ],
   "scripts": {
     "test": "make test"
